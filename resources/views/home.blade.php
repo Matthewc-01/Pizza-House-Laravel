@@ -1,15 +1,24 @@
-@extends('layouts.layout')
+@extends('layouts.app')
+
 @section('content')
-<div class="content">
-    <div class="pizza-logo">
-    <img src="/img/pizza.jpg" alt="pizza house logo" >
+<div class="container">
+    <div class="row justify-content-center">
+        <div class="col-md-8">
+            <div class="card">
+                <div class="card-header">{{ __('Dashboard') }}</div>
+
+                <div class="card-body">
+                    @if (session('status'))
+                        <div class="alert alert-success" role="alert">
+                            {{ session('status') }}
+                        </div>
+                    @endif
+
+                    {{ __('You are logged in!') }}
+                    <p><a href="/pizza/">View all pizza orders</a></p>
+                </div>
+            </div>
+        </div>
     </div>
-    <div class="title">
-        <h1>The South's Best Pizza House</h1>
-    </div>
-    <a href="/pizza/create">Order a Pizza</a>
-    
 </div>
-
-
 @endsection

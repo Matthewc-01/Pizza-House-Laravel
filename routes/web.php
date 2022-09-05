@@ -16,10 +16,17 @@ use Illuminate\Support\Facades\Route;
 
 
 Route::get('/', function () {
-    return view('home');
+    return view('welcome');
 });
 
-Route::get('/pizza','PizzaController@index');
+Route::get('/pizza','PizzaController@index')->middleware('auth');
 Route::get('/pizza/create','PizzaController@create');
 Route::post('/pizza','PizzaController@store');
-Route::get('/pizza/{id}','PizzaController@show');
+Route::get('/pizza/{id}','PizzaController@show')->middleware('auth');
+Route::delete('/pizza/{id}','PizzaController@destroy')->middleware('auth');
+
+Auth::routes([
+    "register" => false
+]);
+
+Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name('home');

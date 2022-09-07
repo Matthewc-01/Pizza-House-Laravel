@@ -12,13 +12,14 @@
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@100;200;300;400&display=swap" rel="stylesheet">    <!-- Styles -->
     {{-- <link rel="stylesheet" href="/css/main.css"> --}}
     <link rel="stylesheet" href="{{ asset('css/app.css') }}">
+    <link rel="stylesheet" href="{{ asset('css/custom.css') }}">
 
 </head>
 
 <body class="antialiased">
+    @include('layouts.navigation')
     @yield('content')
 
-    
     <script src="{{asset('js/app.js')}}" defer></script>
     </body>
     

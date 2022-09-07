@@ -1,0 +1,24 @@
+@import url('https://fonts.googleapis.com/css2?family=Amatic+SC:wght@400;700&display=swap');
+
+body,button{
+    text-transform: uppercase;
+}
+
+.logo{
+    max-width: 500px;
+}
+
+h1,.navbar-brand{
+    font-family: 'Amatic SC', cursive;
+    font-weight: 700;
+}
+.navbar-brand{
+    font-size: 40px;
+}
+.btn-primary{
+    background-color: #c47021;
+    border: 0;
+}
+.btn-primary:hover{
+    background-color: rgb(165, 94, 29)
+}

@@ -23,15 +23,15 @@
                         @endphp
                         @foreach ($pizzas as $pizza)
                             @if ($counter % 2 == 0)
-                                <tr class="bg-white dark:bg-gray-800 text-gray-300 uppercase">
+                                <tr class="bg-gray-800 text-gray-100 uppercase">
                                 @else
-                                <tr class="bg-white dark:bg-gray-600 text-gray-300 uppercase">
+                                <tr class="bg-gray-600 text-gray-300 uppercase">
                             @endif
                             {{-- <td class="py-3 px-6">{{ $pizza->id}}</td>       --}}
                             <td class="py-3 px-6">{{ $pizza->name }}</td>
                             <td class="py-3 px-6">{{ $pizza->type }}</td>
                             <td class="py-3 px-6">{{ $pizza->base }}</td>
-                            <td><a href="/pizza/{{ $pizza->id }}">VIEW</a></td>
+                            <td><a href="{{route('pizzas.show',$pizza->id)}}">VIEW</a></td>
                             </tr>
                             @php
                                 $counter++;

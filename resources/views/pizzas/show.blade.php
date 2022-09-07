@@ -16,14 +16,14 @@
         </div>
 
 
-        <form action="/pizza/{{$pizza->id}}" method="POST">
+        <form action="{{route('pizzas.destroy',$pizza->id)}}" method="POST">
             @csrf
             @method('delete')
 
             <button style="text-decoration:none" class="px-6 py-3 text-green-100 no-underline bg-green-500 rounded hover:bg-green-600 hover:underline hover:text-green-200 mt-3">Complete Order</button>
         </form>
         <br>
-        <a href="/pizza" style="text-decoration:none" class="px-6 py-3 text-blue-100 no-underline bg-blue-500 rounded hover:bg-blue-600 hover:underline hover:text-blue-200"><- Back to all Pizzas</a>
+        <a href="{{route('pizzas.index')}}" style="text-decoration:none" class="px-6 py-3 text-white no-underline bg-brown/[.8] rounded hover:bg-brown/[2]"><- Back to all Pizzas</a>
     </div>
 @endsection
 

@@ -15,7 +15,7 @@
                     @endif
 
                     {{ __('You are logged in!') }}
-                    <p><a href="/pizza/">View all pizza orders</a></p>
+                    <p><a href="{{route('pizzas.index')}}">View all pizza orders</a></p>
                 </div>
             </div>
         </div>
